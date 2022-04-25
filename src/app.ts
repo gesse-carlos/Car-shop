@@ -1,7 +1,7 @@
 import express from 'express';
 import connectToDatabase from './connection';
-import { errorHandler } from './middlewares';
 import { carRouter } from './factory';
+import { errorHandler } from './middlewares';
 
 class App {
   public app: express.Application;

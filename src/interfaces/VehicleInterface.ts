@@ -1,7 +1,7 @@
-export interface IVehicle {
-  model: string
-  year: number
-  color: string
-  status?: boolean
-  buyValue: number
+export interface Vehicle {
+  model: string;
+  year: number;
+  color: string;
+  status?: boolean;
+  buyValue: number;
 }

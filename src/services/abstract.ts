@@ -1,9 +1,7 @@
-import { IModel } from '../interfaces';
+import { Model } from '../interfaces';
 
 export abstract class Service<T> {
-  constructor(
-    protected model: IModel<T>,
-  ) {}
+  constructor(protected model: Model<T>) {}
 
   public async create(item: T): Promise<T> {
     return this.model.create(item);

@@ -1,14 +1,14 @@
 import { Router } from 'express';
 import { Controller } from '../controllers';
-import { ICar, IMiddlewares, IValidator } from '../interfaces';
+import { Car, Middlewares, Validator } from '../interfaces';
 
 export class CarRouter {
   public router = Router();
 
   constructor(
-    private controller: Controller<ICar>,
-    private middlewares: IMiddlewares,
-    private validators: IValidator,
+    private controller: Controller<Car>,
+    private middlewares: Middlewares,
+    private validators: Validator,
   ) {
     this.init();
     this.initAgain();
@@ -37,7 +37,8 @@ export class CarRouter {
     );
   }
 
-  public initAgain(): void { // Just for lint issues
+  public initAgain(): void {
+    // Just for lint issues
     this.router.delete(
       '/:id',
       this.middlewares.validatePathId,

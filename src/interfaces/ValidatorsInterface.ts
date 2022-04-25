@@ -1,5 +1,5 @@
 import { TBodyValidator } from '../types';
 
-export interface IValidator {
-  carValidator: TBodyValidator
+export interface Validator {
+  carValidator: TBodyValidator;
 }

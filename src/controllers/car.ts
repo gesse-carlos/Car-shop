@@ -1,6 +1,6 @@
-import { ICar } from '../interfaces';
+import { Car } from '../interfaces';
 import { Controller } from './abstract';
 
-export class CarController extends Controller<ICar> {}
+export class CarController extends Controller<Car> {}
 
 export const againstDefaultExport2 = '';

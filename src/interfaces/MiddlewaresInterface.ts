@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { TBodyValidator } from '../types';
 
 type TErrorHandler = (
@@ -8,11 +8,9 @@ type TErrorHandler = (
   next: NextFunction
 ) => void;
 
-type TValidateBody = (bodyValidator: TBodyValidator) => (
-  req: Request,
-  res: Response,
-  next: NextFunction
-) => Response | void;
+type TValidateBody = (
+  bodyValidator: TBodyValidator
+) => (req: Request, res: Response, next: NextFunction) => Response | void;
 
 type TValidatePathId = (
   req: Request,
@@ -20,8 +18,8 @@ type TValidatePathId = (
   next: NextFunction
 ) => Response | void;
 
-export interface IMiddlewares {
-  errorHandler: TErrorHandler
-  validateBody: TValidateBody
-  validatePathId: TValidatePathId
+export interface Middlewares {
+  errorHandler: TErrorHandler;
+  validateBody: TValidateBody;
+  validatePathId: TValidatePathId;
 }
