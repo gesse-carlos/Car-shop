@@ -1,5 +1,5 @@
 import { Schema, Document } from 'mongoose';
-import MongoModel from './abstract';
+import { MongoModel } from './abstract';
 import { ICar } from '../interfaces';
 
 interface CarDocument extends ICar, Document {}

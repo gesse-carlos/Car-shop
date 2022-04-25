@@ -1,7 +1,7 @@
 import { Document, Model as M } from 'mongoose';
 import { IModel } from '../interfaces';
 
-export default abstract class MongoModel<T> implements IModel<T> {
+export abstract class MongoModel<T> implements IModel<T> {
   constructor(
     protected model: M<T & Document>,
   ) {}
@@ -26,3 +26,5 @@ export default abstract class MongoModel<T> implements IModel<T> {
     return this.model.findByIdAndDelete(id);
   }
 }
+
+export const againstDefaultExport = '';
