@@ -1,4 +1,4 @@
-import { IVehicle } from './vehicle';
+import { IVehicle } from './VehicleInterface';
 
 export interface ICar extends IVehicle {
   doorsQty: number
